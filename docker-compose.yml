@@ -5,3 +5,9 @@ services:
     build: .
     ports:
       - "5000:80"
+    networks:
+      - undangan-api_undangan
+
+networks:
+  undangan-api_undangan:
+    external: true
