@@ -6,8 +6,8 @@ services:
     ports:
       - "5000:80"
     networks:
-      - undangan-api_undangan
+      - shared-network
 
 networks:
-  undangan-api_undangan:
+  shared-network:
     external: true
