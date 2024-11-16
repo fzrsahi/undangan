@@ -26,6 +26,25 @@
     object-fit: cover;
 }
 
+.img-center-crop-2 {
+    width: 30rem; /* Lebar gambar lebih besar */
+    height: 40rem; /* Tinggi gambar lebih besar untuk format potret */
+    max-width: 100%; /* Pastikan gambar tidak melebihi kontainer */
+    max-height: 100%;
+    object-fit: cover; /* Pastikan gambar tetap proporsional */
+    object-position: center bottom; /* Fokuskan bagian bawah gambar */
+    mask-image: linear-gradient(to bottom, transparent, black, black, black, black, black, transparent); /* Efek gradasi mask */
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black, black, black, black, black, transparent); /* Efek gradasi untuk Safari */
+    transition: transform 0.3s ease-in-out; /* Efek transisi */
+    outline: white;
+}
+
+.img-center-crop-2:hover {
+    transform: scale(1.1); /* Zoom in saat hover */
+    mask-image: linear-gradient(to bottom, transparent, black, black, black, black, transparent); /* Efek gradasi hover */
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black, black, black, black, transparent);
+}
+
 .btn-music {
     bottom: 9vh !important;
     right: 2vh !important;
@@ -63,5 +82,114 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+    object-position: center bottom ; /* Fokuskan bagian bawah gambar */
     mask-image: linear-gradient(to bottom, black, black, black, black, black, transparent);
 }
+
+.bg-cover-home-2 {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center bottom ; /* Fokuskan bagian bawah gambar */
+    mask-image: linear-gradient(to bottom, transparent, black, black, black, black, black, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black, black, black, black, black, transparent); /* Untuk Safari */
+  }
+
+  .bg-cover-home-3 {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    mask-image: linear-gradient(to bottom, transparent, black, black, black, black, black, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black, black, black, black, black, transparent); /* Untuk Safari */
+  }
+
+  
+
+  .profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.profile-left {
+    text-align: right;
+    flex: 1;
+}
+
+.profile-right {
+    text-align: left;
+    flex: 1;
+}
+
+.image-center {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.font-esthetic {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.parents-name {
+    margin: 0;
+}
+
+.love-icon {
+    position: relative;
+}
+
+.love-left {
+    position: absolute;
+    left: 10%;
+}
+
+.love-right {
+    position: absolute;
+    right: 10%;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .profile-left, .profile-right {
+        text-align: center;
+    }
+    
+    .image-center {
+        width: 150px;
+        height: 150px;
+        margin: 1rem 0;
+    }
+    
+    .love-left {
+        left: 5%;
+    }
+    
+    .love-right {
+        right: 5%;
+    }
+}
+
